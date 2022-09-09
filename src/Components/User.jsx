@@ -3,8 +3,8 @@ import { Box, Button, Flex, Text } from '@chakra-ui/react'
 import { ACTIONS } from '../App';
 
 
-const User = ({ item, todo, arr }) => {
-    console.log(arr);
+const User = ({ item, todo }) => {
+    let g = item.isDone
     
     return (
         <Box display='flex'
@@ -14,7 +14,7 @@ const User = ({ item, todo, arr }) => {
             borderRadius='6px'
             w='800px'
             h='80px'
-            style={{ backgroundColor: arr ? 'white' : 'yellow' }} marginTop='20px'>
+            style={{ backgroundColor: g ? 'white' : 'yellow' }} marginTop='20px'>
             <Text fontSize='20px' fontWeight='600'>{item.task}</Text>
             <Flex gap='30px' alignItems='center'>
                 <Button onClick={() => todo({ type: ACTIONS.EDITTODO, payload: { id: item.id } })} bg='green' color='white'>Done</Button>

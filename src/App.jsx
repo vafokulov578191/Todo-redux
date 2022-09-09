@@ -35,7 +35,7 @@ const App = () => {
   const [task, setTask] = useState('Alex')
   const [state, dispatch] = useReducer(reducer, [])
   let { color, setColor } = useContext(Bgcontext)
-
+  
 
   const formSubmit = (e) => {
     e.preventDefault()
